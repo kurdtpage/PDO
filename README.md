@@ -1,26 +1,6 @@
 # PDO
 ## Select
-```
-╔══════════╤═════════════════════════════════════════╤══════════════════════════════════════════════════╗
-║          │ Placeholders no (query)                 │ Placeholders yes (prepare, execute)              ║
-╟──────────┼─────────────────────────────────────────┼──────────────────────────────────────────────────╢
-║ Single   │                                         │ $params = ['id' => $id];                         ║
-║ row      │ $a_json['sql'] = $pdo->niceQuery($sql); │ $a_json['sql'] = $pdo->niceQuery($sql, $params); ║
-║          │ $stmt = $pdo->run($sql);                │ $stmt = $pdo->run($sql, $params);                ║
-║          │ if ($table = $stmt->fetch()) {          │ if ($table = $stmt->fetch()) {                   ║
-║          │     $a_json['id'] = $table['id'];       │     $a_json['id'] = $table['id'];                ║
-║          │ } else {                                │ } else {                                         ║
-║          │     //no data                           │     //no data                                    ║
-║          │ }                                       │ }                                                ║
-╟──────────┼─────────────────────────────────────────┼──────────────────────────────────────────────────╢
-║ Multiple │                                         │ $params = ['id' => $id];                         ║
-║ rows     │ $a_json['sql'] = $pdo->niceQuery($sql); │ $a_json['sql'] = $pdo->niceQuery($sql, $params); ║
-║          │ $stmt = $pdo->run($sql);                │ $stmt = $pdo->run($sql, $params);                ║
-║          │ while ($table = $stmt->fetch()) {       │ while ($table = $stmt->fetch()) {                ║
-║          │     $a_json['id'] = $table['id'];       │     $a_json['id'] = $table['id'];                ║
-║          │ }                                       │ }                                                ║
-╚══════════╧═════════════════════════════════════════╧══════════════════════════════════════════════════╝
-```
+![image](https://github.com/user-attachments/assets/0555dc3a-d5d7-4b05-b695-24cb9feeddb6)
 
 ## Insert
 ```
